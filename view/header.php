@@ -12,7 +12,7 @@ $db_handle = new DBController();
 ?>
 <HTML>
 <HEAD>
-<TITLE>PHP Shopping Cart with jQuery AJAX</TITLE>
+<TITLE>Sam´s Store</TITLE>
 <link href="assets/css/style.css" type="text/css" rel="stylesheet" />
   <link href="style/bootstrap-glyphicons.css" type="text/css" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,7 +21,10 @@ $db_handle = new DBController();
   <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+  
+  
 <script>
 function showEditBox(editobj,id) {
 

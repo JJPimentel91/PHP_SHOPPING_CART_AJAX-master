@@ -56,15 +56,14 @@ require_once('model/productController.php');
             	  </ul>
           		</div>
         	  </li>
-        	  <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> WithBadges <span class="badge pull-right">42</span></a></li>
-        	  <li><a href=""><span class="glyphicon glyphicon-cog"></span> PreferencesMenu</a></li>
+        	  <li><a href="http://<?php echo $_SERVER['HTTP_HOST'].'/'.$current_dir.'/cart.php'; ?>" /><span class="glyphicon glyphicon-shopping-cart"></span> Carrito <span class="badge pull-right" id="numbersforall"></span></a></li>
      		</ul>
       	  </div><!--/.nav-collapse -->
     	</div>
       </div>
     </div><!--end of NAVPANE-->
 
-    <div class="col-sm-10" style="padding-left: 15px;">
+    <div class="col-sm-10" style="padding: 0px 0px 0px 15px;">
       <div class ="col-sm-12" id="nopad">
     	<div class="jumbotron" id="mainpicdiv1">
 		  <h2 id="title3">Sam´s Store</h2>
@@ -72,11 +71,11 @@ require_once('model/productController.php');
 		  <a href="#bolsasmenu"><button id="conoce1">Conoce mas</button></a>
 		</div>
 		<div class="container-fluid" id="nosotros1" class="slideanim">
-		  <div class="txt-heading">Nosotros</div>
 		    <h1 id="title6">Acerca de Nosotros</h1>
 		    <p id="text3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 		    <h1 id="title6">¿Porque Elegirnos?</h1>
-		    <p id="text3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		    <p id="text3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br><br>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>
+		     </p>
 		  </div>
 		  <!--<div class="container-fluid">
 		    <h1 id="title6" style="text-align: left;">¿Porque Elegirnos?</h1>
@@ -242,7 +241,7 @@ require_once('model/productController.php');
 	      <a name="bolsasdiv"></a>
 		  <div class="jumbotron" id="mainpicdiv">
 			<h2 id="title2">Nuevos diseños</h2>
-			<h3 id="title3">Coleccion 2018</h3>
+			<h3 id="title4">Coleccion 2018</h3>
 			<a href="#bolsasmenu"><button id="comprar1">Comprar</button></a>
 		  </div>
 
@@ -296,7 +295,7 @@ require_once('model/productController.php');
 	    <a name="shoesdiv"></a>
 		<div class="jumbotron" id="mainpicdiv3">
 		  <h2 id="title2">Nuevos diseños</h2>
-		  <h3 id="title3">Coleccion 2018</h3>
+		  <h3 id="title4">Coleccion 2018</h3>
 		  <a href="#shoesdiv"><button id="comprar1">Comprar</button></a>
 		</div>
 
@@ -343,12 +342,44 @@ require_once('model/productController.php');
 
 	  <div class="clear-float"></div>
 	  <div id="shopping-cart">
-	    <div class="txt-heading">Shopping Cart <a id="btnEmpty" class="cart-action" onClick="cartAction('empty','');">Empty Cart</a></div>
+	    <div class="jumbotron" id="mainpicdiv4">
+		  <h2 id="title9">Carrito</h2>
+		  <a href="#"><button id="comprar1">Pagar</button></a>
+		</div>
 		<div id="cart-item"></div>
-		<a href="http://<?php echo $_SERVER['HTTP_HOST'].'/'.$current_dir.'/cart.php'; ?>" />Go To Cart Page </a>
+		<div id="btn3"><a id="btnEmpty" class="cart-action" onClick="cartAction('empty','');">Vaciar Carrito</a>
+		<a id="cartpage1" href="http://<?php echo $_SERVER['HTTP_HOST'].'/'.$current_dir.'/cart.php'; ?>" />Pasar a pagar</a></div>
 	  </div>
+
 	</div><!--end of COL SM 10-->
   </div>><!--end of Container Fluid-->
+
+  <div class="container-fluid" id="footer">
+    <div class="col-sm-4" id="nopad">
+      <h1 id="title10">Sam´s Store</h1>
+      <p id="icon-footer">Nosotros <br>
+  	  Bolsas<br>
+  	  Zapatos<br></p>
+    </div>
+    <div class="col-sm-4" id="nopad">
+      <h1 id="title11">Contactanos</h1>
+      <p id="icon-footer"><i class="glyphicon glyphicon-map-marker"></i> Queretaro<br>
+  	  <i class="fas fa-phone"></i> 442 000 0000<br>
+  	  <i class="fas fa-envelope"></i> contacto@samsstore.com<br></p>
+  	</div>
+    <div class="col-sm-4">
+      <h1 id="title11" id="nopad">Aceptamos</h1>
+      <p><i class="fab fa-cc-visa" id="icon-footer"></i> VISA<br>
+  	  <i class="fab fa-cc-mastercard" id="icon-footer"></i> Mastercard<br>
+  	  <i class="fab fa-cc-amex" id="icon-footer"></i> American Express<br>
+  	  <i class="fab fa-cc-paypal" id="icon-footer"></i> Paypal<br></p>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="footer2">
+  	<p>CP Web Solutions</p>
+  </div>
+
 
 <script>
 $(document).ready(function () {

@@ -77,24 +77,27 @@ exit(0);
 if(isset($_SESSION["cart_item"])){
     $item_total = 0;
 ?>	
-<table cellpadding="10" cellspacing="1">
-<tbody>
+<table class="table table-hover" id="thetable5">
+<thead>
 <tr>
-<th><strong>Name</strong></th>
-<th><strong>Code</strong></th>
-<th><strong>Quantity</strong></th>
-<th><strong>Price</strong></th>
-<th><strong>Action</strong></th>
+<th style="text-align: center"><strong>Nombre</strong></th>
+<th style="text-align: center"><strong>Codigo</strong></th>
+<th style="text-align: center"><strong>Cantidad</strong></th>
+<th style="text-align: center"><strong>Precio</strong></th>
+<th style="text-align: center"><strong>¿Quitar?</strong></th>
 </tr>	
+</thead>
+<tbody>
+
 <?php		
     foreach ($_SESSION["cart_item"] as $item){
 		?>
 				<tr>
-				<td><strong><?php echo $item["name"]; ?></strong></td>
-				<td><?php echo $item["code"]; ?></td>
-				<td><?php echo $item["quantity"]; ?></td>
-				<td align=right><?php echo "$".$item["price"]; ?></td>
-				<td><a onClick="cartAction('remove','<?php echo $item["code"]; ?>')" class="btnRemoveAction cart-action">Remove Item</a></td>
+				<td style="text-align: center"><strong><?php echo $item["name"]; ?></strong></td>
+				<td style="text-align: center"><?php echo $item["code"]; ?></td>
+				<td style="text-align: center"><?php echo $item["quantity"]; ?></td>
+				<td align=center><?php echo "$".$item["price"]; ?></td>
+				<td style="text-align: center"><a onClick="cartAction('remove','<?php echo $item["code"]; ?>')" class="btnRemoveAction cart-action"><span class="glyphicon glyphicon-remove"></span><!--RED X--></a></td>
 				</tr>
 				<?php
         $item_total += ($item["price"]*$item["quantity"]);
@@ -105,7 +108,15 @@ if(isset($_SESSION["cart_item"])){
 <td colspan="5" align=right><strong>Total:</strong> <?php echo "$".$item_total; ?></td>
 </tr>
 </tbody>
-</table>		
+</table>
+
+<script>
+
+    var x = document.getElementById("thetable5").rows.length;
+    var y = x-2;
+    document.getElementById("numbersforall").innerHTML = y;
+
+</script>		
   <?php
 }
 ?>
